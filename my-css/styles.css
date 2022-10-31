@@ -1,0 +1,86 @@
+:root {
+    --color-primary: #3399ff;
+    --color-secondary: #565594;
+    --color-tertiary: #F85E81;
+
+    --color-headingText: #191D27;
+
+    --color-background-primary: #F2F5F7;
+    --color-background-secondary: #47467A;
+    --color-background-tertiary: #ffffff;
+
+    --parents-gap: 20px;
+    --children-gap: 15px;
+}
+
+html, body {
+    font-family: 'Roboto Serif', serif;
+    font-size: 10px;
+    line-height: 1;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /*box-sizing: border-box;*/
+}
+
+p, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+}
+
+#header-content {
+    width: 100vw;
+    /*background-color: var(--color-secondary);*/
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--parents-gap);
+
+}
+
+.btn{
+    border: none;
+    text-align: center;
+}
+
+.btn-nav {
+    height: auto;
+    font-size: 4rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    background-color: var(--color-tertiary);
+}
+
+.logo-span {
+    font-size: 6rem;
+    color: var(--color-headingText);
+}
+
+#drawer-nav {
+    width: 100%;
+    background-color: var(--color-secondary);
+}
+
+ul > li {
+    list-style-type: none;
+    padding: 2em 0;
+}
+
+li a.menu-a {
+    font-size: 2.5em;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+@media only screen and (min-width: 780px) {
+
+    #drawer-nav {
+        display: none;
+    }
+
+}
