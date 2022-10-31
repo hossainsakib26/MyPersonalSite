@@ -44,6 +44,7 @@ p, h1, h2, h3{
     border: none;
     text-align: center;
     color: #F2F5F7;
+    cursor: pointer;
 
     height: auto;
     font-size: 4rem;
@@ -61,13 +62,18 @@ p, h1, h2, h3{
 }
 
 #mobile-nav {
-    width: 65%;
+    width: 0;
     height: 100vh;
-    background-color: var(--color-secondary);
+    /*background-color: var(--color-secondary);*/
+    background-color: var(--color-tertiary);
+    border-radius: 2rem 0 0 2rem;
 
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 1s;
 }
 
 ul > li {
