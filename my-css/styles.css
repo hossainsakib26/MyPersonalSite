@@ -32,26 +32,27 @@ p, h1, h2, h3{
 
 #header-content {
     width: 100vw;
-    /*background-color: var(--color-secondary);*/
+    /*background-color: #F85E81;*/
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     gap: var(--parents-gap);
-
-}
-
-.btn{
-    border: none;
-    text-align: center;
 }
 
 .btn-nav {
+    border: none;
+    text-align: center;
+    color: #F2F5F7;
+
     height: auto;
     font-size: 4rem;
     margin: 1rem 0;
     border-radius: 0.5rem;
     background-color: var(--color-tertiary);
+
+    position: absolute;
+    left: 1rem;
 }
 
 .logo-span {
@@ -59,9 +60,14 @@ p, h1, h2, h3{
     color: var(--color-headingText);
 }
 
-#drawer-nav {
-    width: 100%;
+#mobile-nav {
+    width: 65%;
+    height: 100vh;
     background-color: var(--color-secondary);
+
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 ul > li {
@@ -79,7 +85,7 @@ li a.menu-a {
 
 @media only screen and (min-width: 780px) {
 
-    #drawer-nav {
+    #mobile-nav {
         display: none;
     }
 

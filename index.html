@@ -18,14 +18,15 @@
 
     <header id="header-content">
 
-        <button class="btn btn-nav">
+        <button class="btn-nav" onclick="changeSidNav()">
             <i class="bi bi-list"></i>
         </button>
 
         <p class="logo-span">Sazzad</p>
 
     </header>
-    <nav id="drawer-nav">
+
+    <nav id="mobile-nav">
         <ul class="menu-list">
             <li>
                 <a class="menu-a" href="#">About Me</a>
@@ -51,5 +52,19 @@
     <footer id="footer-content">
 
     </footer>
+
+    <script>
+
+        function changeSidNav() {
+            var selectedElement = document.getElementById('mobile-nav');
+            var sideNavWidth = selectedElement.clientWidth;
+
+            if (sideNavWidth > 0) {
+                selectedElement.style.display = "none";
+            }else {
+                selectedElement.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
