@@ -30,6 +30,7 @@ p, h1, h2, h3{
     padding: 0;
 }
 
+/*header content start*/
 #header-content {
     width: 100vw;
     /*background-color: #F85E81;*/
@@ -87,12 +88,16 @@ li a.menu-a {
     color: #ffffff;
 }
 
+/*header content end*/
+
 
 
 @media only screen and (min-width: 780px) {
 
+    /*header content start*/
     #mobile-nav {
         display: none;
     }
+    /*header content end*/
 
 }
