@@ -3,7 +3,8 @@
     --color-secondary: #565594;
     --color-tertiary: #F85E81;
 
-    --color-headingText: #191D27;
+    --color-text1: #191D27;
+    --color-text2: #47467A;
 
     --color-background-primary: #F2F5F7;
     --color-background-secondary: #47467A;
@@ -33,12 +34,12 @@ p, h1, h2, h3{
 /*header content start*/
 #header-content {
     width: 100vw;
-    /*background-color: #F85E81;*/
+    /*background-color: #3399ff75;*/
+    padding: 0.5rem 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--parents-gap);
 
     position: fixed;
     z-index: 1;
@@ -52,7 +53,7 @@ p, h1, h2, h3{
     cursor: pointer;
 
     height: auto;
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 1rem 0;
     border-radius: 0.5rem;
     background-color: var(--color-tertiary);
@@ -62,8 +63,11 @@ p, h1, h2, h3{
 }
 
 .logo-span {
-    font-size: 6rem;
-    color: var(--color-headingText);
+    font-size: 4rem;
+    /*color: var(--color-headingText);*/
+    color: #100fa1;
+    font-weight: 700;
+    /*text-shadow: 0.5px 0.5px 2px var(--color-text2);*/
 }
 
 #side-nav-keeper{
@@ -73,10 +77,24 @@ p, h1, h2, h3{
     z-index: 1;
     overflow-x: hidden;
 
-    background-color: #F85E8125;
+    background-color: #56559425;
     width: 0%;
     height: 100vh;
     transition: 1s;
+
+    animation: nav-move 2s ease-in;
+}
+
+@keyframes nav-move {
+    0% {
+        background-color: #47467A;
+    }
+    50% {
+        background-color: #47467A75;
+    }
+    100% {
+        background-color: #47467A25;
+    }
 }
 
 #side-nav-keeper > span {
@@ -105,6 +123,10 @@ p, h1, h2, h3{
     transition: 1s;
 }
 
+#pc-nav{
+    display: none;
+}
+
 ul > li {
     list-style-type: none;
     padding: 2em 0;
@@ -123,6 +145,10 @@ li a.menu-a {
 @media only screen and (min-width: 780px) {
 
     /*header content start*/
+    .btn-nav {
+        display: none;
+    }
+
     #side-nav-keeper {
         display: none;
     }
@@ -130,6 +156,35 @@ li a.menu-a {
     #mobile-nav {
         display: none;
     }
-    /*header content end*/
+
+    #header-content {
+        width: 100vw;
+        /*background-color: #3399ff75;*/
+        padding: 0.5rem 2rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #pc-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0 2rem;
+    }
+
+    #pc-nav a.menu-a {
+        font-size: 1.5em;
+        text-decoration: none;
+        color: #191889;
+        transition: 0.5s;
+    }
+
+    #pc-nav a.menu-a:hover {
+        text-decoration: underline;
+        transform: translateY(-0.10rem);
+    }
+        /*header content end*/
 
 }
