@@ -13,7 +13,7 @@
     --parents-gap: 20px;
     --children-gap: 15px;
 }
-
+/*common css starts*/
 html, body {
     font-family: 'Roboto Serif', serif;
     font-size: 10px;
@@ -30,6 +30,31 @@ p, h1, h2, h3{
     margin: 0;
     padding: 0;
 }
+
+h2 {
+    color: #47467A;
+    font-size: 3rem;
+}
+h3{
+    color: #47467A;
+    font-size: 2rem;
+}
+
+
+.btn {
+    padding: 1.5rem 3rem;
+    border: none;
+    color: #F2F5F7;
+    font-size: 1.75rem;
+    text-decoration: none;
+    margin: 2rem 0 0 0;
+}
+
+.btn-main {
+    background-color: #565594;
+}
+
+/*common css end*/
 
 /*header content start*/
 #header-content {
@@ -67,11 +92,11 @@ p, h1, h2, h3{
     /*color: var(--color-headingText);*/
     color: #100fa1;
     font-weight: 700;
-    /*text-shadow: 0.5px 0.5px 2px var(--color-text2);*/
+    text-shadow: 0.5px 0.5px 2px var(--color-text2);
 }
 
 #side-nav-keeper{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 1;
@@ -79,10 +104,14 @@ p, h1, h2, h3{
 
     background-color: #56559425;
     width: 0%;
-    height: 100vh;
+    height: 100%;
     transition: 1s;
 
     animation: nav-move 2s ease-in;
+}
+
+#side-nav-keeper > span {
+    color: #F85E81;
 }
 
 @keyframes nav-move {
@@ -110,12 +139,12 @@ p, h1, h2, h3{
 
 #mobile-nav {
     width: 0;
-    height: 100vh;
+    height: 100%;
     /*background-color: var(--color-secondary);*/
     background-color: var(--color-tertiary);
     border-radius: 2rem 0 0 2rem;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 2;
@@ -140,7 +169,89 @@ li a.menu-a {
 
 /*header content end*/
 
+/*main start*/
+#main-content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--parents-gap) 0;
+
+}
+/*main end*/
+
+#about-me, #tech-footprint, #projects, #educations, #personel {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 8rem 0;
+}
+
+.div-section {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*about-me section start*/
+#about-me {
+    background-color: var(--color-background-primary);
+}
+
+#about-me > .div-section {
+    flex-direction: column-reverse;
+}
+
+.info-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 2rem 0;
+    padding: 3rem 0 0 0;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+}
+
+.social-link {
+
+}
+.social-link > a {
+    padding: 0 2rem 0 0;
+    font-size: 1.5rem;
+}
+/*about-me section start*/
+
+/*tech-footprint work start*/
+#tech-footprint {
+
+}
+
+.frontend, .backend, .database {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.tech-image {
+    width: 20%;
+    height: auto;
+}
+/*tech-footprint work end*/
 
 @media only screen and (min-width: 780px) {
 
@@ -159,7 +270,6 @@ li a.menu-a {
 
     #header-content {
         width: 100vw;
-        /*background-color: #3399ff75;*/
         padding: 0.5rem 2rem;
 
         display: flex;
@@ -175,7 +285,7 @@ li a.menu-a {
     }
 
     #pc-nav a.menu-a {
-        font-size: 1.5em;
+        font-size: 1.75em;
         text-decoration: none;
         color: #191889;
         transition: 0.5s;
@@ -186,5 +296,19 @@ li a.menu-a {
         transform: translateY(-0.10rem);
     }
         /*header content end*/
+
+    /*main section start*/
+    #main-content {
+        /*width: 100%;*/
+        height: auto;
+        /*overflow-y: hidden;*/
+    }
+    /*main section end*/
+
+    /*about-me section start*/
+    #about-me {
+
+    }
+    /*about-me section end*/
 
 }
