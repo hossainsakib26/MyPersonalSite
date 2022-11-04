@@ -73,6 +73,8 @@ h3{
 }
 .card-body {
     padding: 0.5rem 1rem;
+    box-sizing: border-box;
+
     width: 100%;
     display: grid;
     grid-template-columns: auto;
@@ -88,10 +90,11 @@ h3{
     row-gap: 0.75rem;
 }
 .card-body > .project-name {
-    border-bottom: 3px solid #3399ff25;
+
 }
 .card-info > .project-date, .project-desc {
     font-size: 1.5rem;
+    box-sizing: border-box;
 }
 
 /*common css end*/
@@ -214,6 +217,7 @@ li a.menu-a {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
@@ -307,7 +311,7 @@ li a.menu-a {
 }
 
 #projects > .div-section{
-    background-color: #F85E8125;
+    /*background-color: #F85E8125;*/
     gap: 1rem 0;
 }
 
