@@ -23,7 +23,7 @@ html, body {
 body {
     padding: 0;
     margin: 0;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 
 p, h1, h2, h3{
@@ -45,13 +45,53 @@ h3{
     padding: 1.5rem 3rem;
     border: none;
     color: #F2F5F7;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    margin: 2rem 0 0 0;
+    margin: 0;
 }
 
 .btn-main {
     background-color: #565594;
+}
+
+.btn-info {
+    background-color: #3399ff;
+}
+
+.card {
+    width: 100%;
+    background-color: var(--color-background-primary);
+}
+
+.card > .card-header, .card-body{
+    width: 100%;
+}
+
+.card-header > img {
+    width: 100%;
+    height: 75%;
+}
+.card-body {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 2rem;
+}
+
+.card-body > .card-footer {
+    width: 100%;
+}
+.card-body > .card-info {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 0.75rem;
+}
+.card-body > .project-name {
+    border-bottom: 3px solid #3399ff25;
+}
+.card-info > .project-date, .project-desc {
+    font-size: 1.5rem;
 }
 
 /*common css end*/
@@ -179,7 +219,7 @@ li a.menu-a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--parents-gap) 0;
+    /*gap: var(--parents-gap) 0;*/
 
 }
 /*main end*/
@@ -188,7 +228,7 @@ li a.menu-a {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 8rem 0;
+    padding: 6.5rem 0;
 }
 
 .div-section {
@@ -231,20 +271,28 @@ li a.menu-a {
     padding: 0 2rem 0 0;
     font-size: 1.5rem;
 }
-/*about-me section start*/
+/*about-me section end*/
 
 /*tech-footprint work start*/
 #tech-footprint {
+/*background-color: #F85E8125;*/
+}
+
+#tech-footprint > .div-section {
+    /*background-color: #56559425;*/
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 4rem;
 
 }
 
-.frontend, .backend, .database {
+.frontend, .backend, .database{
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
-    justify-content: space-evenly;
+    grid-template-columns: auto;
+    row-gap: 2rem;
+    text-align: center;
 }
 
 .tech-image {
@@ -252,6 +300,18 @@ li a.menu-a {
     height: auto;
 }
 /*tech-footprint work end*/
+
+/*project section work start*/
+#projects {
+    background-color: #56559425;
+}
+
+#projects > .div-section{
+    background-color: #F85E8125;
+    gap: 1rem 0;
+}
+
+/*project section work end*/
 
 @media only screen and (min-width: 780px) {
 
@@ -272,9 +332,7 @@ li a.menu-a {
         width: 100vw;
         padding: 0.5rem 2rem;
 
-        display: flex;
         justify-content: space-around;
-        align-items: center;
     }
 
     #pc-nav{
@@ -310,5 +368,33 @@ li a.menu-a {
 
     }
     /*about-me section end*/
+
+    /*tech-footprint work start*/
+    #tech-footprint {
+        /*background-color: #F85E8125;*/
+    }
+
+    #tech-footprint > .div-section {
+        /*background-color: #56559425;*/
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 4rem;
+
+    }
+
+    .frontend, .backend, .database{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 2rem;
+        text-align: center;
+    }
+
+    .tech-image {
+        width: 20%;
+        height: auto;
+    }
+    /*tech-footprint work end*/
 
 }
