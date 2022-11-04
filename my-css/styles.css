@@ -9,21 +9,22 @@
     --color-background-primary: #F2F5F7;
     --color-background-secondary: #47467A;
     --color-background-tertiary: #ffffff;
+    --color-background-final: #A460ED;
 
     --parents-gap: 20px;
     --children-gap: 15px;
 }
 /*common css starts*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     font-family: 'Roboto Serif', serif;
     font-size: 10px;
     line-height: 1;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
 }
 
 p, h1, h2, h3{
@@ -73,7 +74,7 @@ h3{
 }
 .card-body {
     padding: 0.5rem 1rem;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 
     width: 100%;
     display: grid;
@@ -94,7 +95,7 @@ h3{
 }
 .card-info > .project-date, .project-desc {
     font-size: 1.5rem;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 /*common css end*/
@@ -102,7 +103,7 @@ h3{
 /*header content start*/
 #header-content {
     width: 100vw;
-    /*background-color: #3399ff75;*/
+    background-color: var(--color-background-secondary);
     padding: 0.5rem 0;
 
     display: flex;
@@ -132,8 +133,8 @@ h3{
 
 .logo-span {
     font-size: 4rem;
-    /*color: var(--color-headingText);*/
-    color: #100fa1;
+    color: #ffffff;
+    /*color: #100fa1;*/
     font-weight: 700;
     text-shadow: 0.5px 0.5px 2px var(--color-text2);
 }
@@ -143,14 +144,14 @@ h3{
     top: 0;
     right: 0;
     z-index: 1;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 
     background-color: #56559425;
-    width: 0%;
-    height: 100%;
+    width: 0;
+    height: 100vh;
     transition: 1s;
 
-    animation: nav-move 2s ease-in;
+    /*animation: nav-move 2s ease-in;*/
 }
 
 #side-nav-keeper > span {
@@ -159,13 +160,16 @@ h3{
 
 @keyframes nav-move {
     0% {
-        background-color: #47467A;
+        width: 30%;
+        background-color: #47467A25;
     }
     50% {
+        width: 70%;
         background-color: #47467A75;
     }
     100% {
-        background-color: #47467A25;
+        width: 100%;
+        background-color: #47467A;
     }
 }
 
@@ -182,10 +186,10 @@ h3{
 
 #mobile-nav {
     width: 0;
-    height: 100%;
-    /*background-color: var(--color-secondary);*/
+    height: 100vh;
     background-color: var(--color-tertiary);
     border-radius: 2rem 0 0 2rem;
+    /*padding: 0 2rem;*/
 
     position: fixed;
     top: 0;
@@ -197,6 +201,9 @@ h3{
 
 #pc-nav{
     display: none;
+}
+#mobile-nav > .menu-list {
+    padding: 3rem 2rem;
 }
 
 ul > li {
