@@ -98,6 +98,84 @@ h3{
     /*box-sizing: border-box;*/
 }
 
+/*grid card making start*/
+.campus-logo {
+    width: 5rem;
+    height: auto;
+}
+
+.grid-card {
+    background: #F2F5F7;
+    width: 100%;
+    padding: 0.25rem;
+
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 0.25rem;
+}
+
+.grid-card-header {
+    /*background: #56559490;*/
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 0.5rem;
+}
+
+.grid-logo, .course {
+    /*background: #fff;*/
+    padding: 1rem 0;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid-logo {
+    height: auto;
+    width: auto;
+}
+.course {
+    grid-column: 2/5;
+}
+
+.grid-card-body {
+    /*background: #56559490;*/
+    padding: 0.25rem;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0.25rem;
+}
+.left-display, .right-display {
+    display: grid;
+    align-items: center;
+}
+
+.left-display {
+    /*background: #F85E8150;*/
+    padding: 2rem;
+    grid-column: 1/2;
+    justify-items: right;
+}
+.right-display {
+    /*background: #F85E8150;*/
+    padding: 2rem;
+    justify-items: left;
+}
+.course-text {
+    font-size: 1.5rem;
+}
+.info-sub{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.info-information {
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+/*grid card work end*/
+
 /*common css end*/
 
 /*header content start*/
@@ -160,15 +238,15 @@ h3{
 
 @keyframes nav-move {
     0% {
-        width: 30%;
+        /*width: 30%;*/
         background-color: #47467A25;
     }
     50% {
-        width: 70%;
+        /*width: 70%;*/
         background-color: #47467A75;
     }
     100% {
-        width: 100%;
+        /*width: 100%;*/
         background-color: #47467A;
     }
 }
@@ -321,10 +399,21 @@ li a.menu-a {
     /*background-color: #F85E8125;*/
     gap: 1rem 0;
 }
-
 /*project section work end*/
 
-@media only screen and (min-width: 780px) {
+/*educations work starts*/
+
+.edu-div-sec {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 1rem;
+}
+
+/*educations work end*/
+
+@media only screen and (min-width: 650px) {
 
     /*header content start*/
     .btn-nav {
